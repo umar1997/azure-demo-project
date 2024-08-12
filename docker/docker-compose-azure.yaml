@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  app:
+    container_name: umar_team_app
+    image: aiappliedsciences.azurecr.io/team_app:latest
+    restart: always
+    env_file: ./../demoApp/.env
+    ports:
+      - "15080:15080"
+    networks:
+      - umar_team_app_network
+    command: ["python3", "main.py"]
+
+  db:
+    container_name: umar_team_db
+    image: aiappliedsciences.azurecr.io/postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: umar
+      POSTGRES_PASSWORD: umar_password
+      POSTGRES_DB: demo_postgres_db
+    ports:
+      - "25432:5432"
+    networks:
+      - umar_team_app_network
+
+networks:
+  umar_team_app_network:
+    driver: bridge
+    name: umar_team_app_network

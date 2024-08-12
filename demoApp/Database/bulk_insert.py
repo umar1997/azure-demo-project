@@ -32,7 +32,7 @@ class User(Base):
 
 
 def insert_df_to_db(df):
-    DATABASE_URL = os.getenv("POSTGRES_CONNECTION_STRING_LOCAL")
+    DATABASE_URL = os.getenv("POSTGRES_CONNECTION_STRING")
     engine = create_engine(DATABASE_URL)
     SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     db = SessionLocal()
