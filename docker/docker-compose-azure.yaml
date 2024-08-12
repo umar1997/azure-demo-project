@@ -5,7 +5,7 @@ services:
     container_name: umar_team_app
     image: aiappliedsciences.azurecr.io/team_app:latest
     restart: always
-    env_file: ./../demoApp/.env
+    env_file: ./../demoApp/.env_azure
     ports:
       - "15080:15080"
     networks:

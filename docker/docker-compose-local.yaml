@@ -58,6 +58,7 @@ networks:
 
 # docker build -f docker/Dockerfile.app -t umar/demo_app:base .
 # docker run -it --name umar_test umar/demo_app:base bash
+# docker run -it --name umar_test aiappliedsciences.azurecr.io/team_app:latest bash
 
 # docker exec -it umar_team_app /bin/bash
 
