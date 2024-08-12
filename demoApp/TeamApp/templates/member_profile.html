@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <div class="text-center">
+        <h1>{{ member.name }}'s Profile</h1>
+        <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile Picture" class="profile-img">
+        </div>
+        <div class="profile-details">
+        <p><strong>Name:</strong> {{ member.name }}</p>
+        <p><strong>Email:</strong> {{ member.email }}</p>
+        <p><strong>Gender:</strong> {{ member.gender }}</p>
+        <p><strong>Age:</strong> {{ member.age }}</p>
+        <p><strong>Position:</strong> {{ member.position }}</p>
+        <p><strong>Reports to:</strong> 
+            <a href="{{ url_for('member.member_profile', email_id=member.reports_to) }}">
+                {{ member.reports_to }}
+            </a>
+        </p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

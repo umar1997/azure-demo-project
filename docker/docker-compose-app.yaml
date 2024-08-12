@@ -1,0 +1,76 @@
+version: '3'
+
+services:
+  app:
+    container_name: umar_team_app
+    image: umar/demo_app:base
+    restart: always
+    env_file: ./../demoApp/.env
+    ports:
+      - "15080:15080"
+    networks:
+      - umar_team_app_network
+    command: ["python3", "main.py"]
+    # command: tail -f /dev/null
+
+  db:
+    container_name: umar_team_db
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: umar
+      POSTGRES_PASSWORD: umar_password
+      POSTGRES_DB: demo_postgres_db
+    ports:
+      - "25432:5432"
+    networks:
+      - umar_team_app_network
+    
+    # psql -h reading-group-postgres.postgres.database.azure.com -p 5432 -U umar postgres
+    # Password_123
+
+networks:
+  umar_team_app_network:
+    driver: bridge
+    name: umar_team_app_network
+
+
+
+# /nfs/users/ext_tr_muhammad_salman/Azure_AI/demo-app
+# docker ps -a --filter "name=umar_*"
+
+# docker compose -f docker/docker-compose-app.yaml up -d
+# docker compose -f docker/docker-compose-app.yaml down
+
+# docker images --filter "reference=umar/*"
+# docker images --filter "reference=aiappliedsciences.azurecr.io/*"
+# docker images --filter "reference=postgres*"
+
+###################### APP
+
+# docker rmi umar/demo_app:base
+
+# docker build -f docker/Dockerfile.app -t umar/demo_app:base .
+# docker run -it --name umar_test umar/demo_app:base bash
+
+# docker exec -it umar_team_app /bin/bash
+
+###################### DATABASE
+
+# docker run -it --name umar_test_db aiappliedsciences.azurecr.io/postgres:latest bash
+
+# docker exec -it umar_team_db /bin/bash
+
+# psql -U umar -d demo_db
+# https://github.com/umar1997/Data_Engineering/blob/main/Database_Commands/postgres.txt
+
+
+# \q          QUIT
+# \l+         SHOW DATABASES
+# \c demo_db    CHOOSE DATABASE
+# \dt+ public.*  TABLES IN SCHEMA
+# \d public.users.*   COLUMNS IN TABLE
+
+# SELECT * FROM public.users;
+
+# SELECT schema_name FROM information_schema.schemata;
