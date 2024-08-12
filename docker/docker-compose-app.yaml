@@ -8,10 +8,13 @@ services:
     env_file: ./../demoApp/.env
     ports:
       - "15080:15080"
-    networks:
-      - umar_team_app_network
     command: ["python3", "main.py"]
     # command: tail -f /dev/null
+    depends_on:
+      - db
+      
+    networks:
+      - umar_team_app_network
 
   db:
     container_name: umar_team_db
@@ -25,9 +28,6 @@ services:
       - "25432:5432"
     networks:
       - umar_team_app_network
-    
-    # psql -h reading-group-postgres.postgres.database.azure.com -p 5432 -U umar postgres
-    # Password_123
 
 networks:
   umar_team_app_network:
@@ -41,6 +41,9 @@ networks:
 
 # docker compose -f docker/docker-compose-app.yaml up -d
 # docker compose -f docker/docker-compose-app.yaml down
+
+# docker compose -f docker/docker-compose-azure.yaml up -d
+# docker compose -f docker/docker-compose-azure.yaml down
 
 # docker images --filter "reference=umar/*"
 # docker images --filter "reference=aiappliedsciences.azurecr.io/*"
@@ -58,12 +61,9 @@ networks:
 ###################### DATABASE
 
 # docker run -it --name umar_test_db aiappliedsciences.azurecr.io/postgres:latest bash
-
 # docker exec -it umar_team_db /bin/bash
 
-# psql -U umar -d demo_db
-# https://github.com/umar1997/Data_Engineering/blob/main/Database_Commands/postgres.txt
-
+# psql -U umar -d demo_postgres_db
 
 # \q          QUIT
 # \l+         SHOW DATABASES
