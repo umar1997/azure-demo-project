@@ -67,6 +67,9 @@ networks:
 # docker run -it --name umar_test_db aiappliedsciences.azurecr.io/postgres:latest bash
 # docker exec -it umar_team_db /bin/bash
 
+# psql -h reading-group-postgres.postgres.database.azure.com -p 5432 -U umar postgres
+# Password_123
+
 # psql -U umar -d demo_postgres_db
 
 # \q          QUIT

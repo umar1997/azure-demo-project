@@ -1,5 +1,12 @@
-# DO NOT include azure-functions-worker in this file
-# The Python Worker is managed by Azure Functions platform
-# Manually managing azure-functions-worker may cause unexpected issues
-
-azure-functions
+azure-core==1.30.2
+azure-datalake-store==0.0.53
+azure-functions==1.20.0
+azure-identity==1.17.1
+azure-storage-blob==12.22.0
+SQLAlchemy==2.0.32
+fsspec==2024.6.1
+psycopg2-binary==2.9.9
+adlfs==2024.7.0
+numpy==1.24.4
+pandas==2.0.3
+python-dotenv==1.0.1
