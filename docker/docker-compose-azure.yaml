@@ -12,19 +12,6 @@ services:
       - umar_team_app_network
     command: ["python3", "main.py"]
 
-  db:
-    container_name: umar_team_db
-    image: aiappliedsciences.azurecr.io/postgres:latest
-    restart: always
-    environment:
-      POSTGRES_USER: umar
-      POSTGRES_PASSWORD: umar_password
-      POSTGRES_DB: demo_postgres_db
-    ports:
-      - "25432:5432"
-    networks:
-      - umar_team_app_network
-
 networks:
   umar_team_app_network:
     driver: bridge
