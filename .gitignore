@@ -4,3 +4,5 @@ demoEnv
 **/.env
 **/.env_azure
 Info.txt
+Data/
+azcopy
