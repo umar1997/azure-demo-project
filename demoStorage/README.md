@@ -7,6 +7,7 @@
 
 ### Set Up
 1. Create a Azure Blob Storage on Azure Portal
+<br>
 [https://portal.azure.com/#create/Microsoft.StorageAccount-ARM](https://portal.azure.com/#create/Microsoft.StorageAccount-ARM)
 
 2. Set up the Blob Storage
@@ -72,5 +73,5 @@
       - Copy the folder contents into the Storage
       ```shell
       # cd to the folder which has the azcopy executable
-      ./azcopy copy "/nfs/users/ext_tr_muhammad_salman/Azure_AI/azure-demo-project/demoStorage/Data" "https://readinggroupstorage.blob.core.windows.net/sample-container?sp=rw&st=2024-08-12T17:20:19Z&se=2024-08-31T01:20:19Z&sv=2022-11-02&sr=c&sig=Hak6U7cPBDlqvYM1jYh%2Fvpz5gNtpIUYVtGE6yTpBj58%3D" --recursive=true
+      ./azcopy copy "/nfs/users/ext_tr_muhammad_salman/Azure_AI/azure-demo-project/demoStorage/Data/*" "https://readinggroupstorage.blob.core.windows.net/sample-container?sp=rw&st=2024-08-12T17:20:19Z&se=2024-08-31T01:20:19Z&sv=2022-11-02&sr=c&sig=Hak6U7cPBDlqvYM1jYh%2Fvpz5gNtpIUYVtGE6yTpBj58%3D" --recursive=true
       ```

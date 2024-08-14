@@ -4,10 +4,15 @@
 > The goal of the project is to create an Azure Virtual Machine and deploy an application onto it
 
 
-> Azure Virtual Machines (VMs) is a scalable and flexible cloud computing service provided by Microsoft Azure that allows users to deploy and manage virtualized computing resources in the cloud. It enables you to run a wide range of operating systems and applications on virtualized hardware, scaling resources up or down based on demand. Azure VMs are useful for a variety of scenarios, including hosting applications, running development and test environments, and processing large data sets. They offer high availability, robust security features, and seamless integration with other Azure services, providing a cost-effective and efficient solution for dynamic workloads and infrastructure management.
+> Azure Virtual Machines (VMs) is a scalable and flexible cloud computing service provided by Microsoft Azure that allows users to deploy and manage virtualized computing resources in the cloud. 
+
+- It enables you to run a wide range of operating systems and applications on virtualized hardware, scaling resources up or down based on demand. 
+- Azure VMs are useful for a variety of scenarios, including hosting applications, running development and test environments, and processing large data sets. 
+- They offer high availability, robust security features, and seamless integration with other Azure services, providing a cost-effective and efficient solution for dynamic workloads and infrastructure management.
 
 ### Set Up
 1. Create a Azure Blob Storage on Azure Portal
+<br>
 [https://portal.azure.com/#create/Microsoft.VirtualMachine-ARM](https://portal.azure.com/#create/Microsoft.VirtualMachine-ARM)
 
 2. Select different configurations
@@ -28,12 +33,13 @@
 
         - Public IP: A Public IP address is an IP address that is accessible from the internet and is used to expose resources, such as virtual machines, to external networks.
 
-3. Once created the following Apps will be created in your RG (Unless for some you chose an already existing service)
+3. Once created the following Apps will be created in your RG (Unless for some you chose an already existing service which is in another RG)
     - Virtual Machine
     - Public IP Address
     - Network Security Group
     - Virtual Network
     - Network Interface
+    - App Service Plan
     - Disk
 
 4. Can connect through the Portal
@@ -47,7 +53,7 @@ umar-admin@20.174.10.146's password:
 ```
 6. Git is already installed in your VM but you will need to install Docker
 7. Set up Docker on your VM 
-[Link](https://www.youtube.com/watch?v=UM0f76-0FLI)
+([YouTube Tutorial Link](https://www.youtube.com/watch?v=UM0f76-0FLI))
 ```shell
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -69,6 +75,7 @@ sudo apt-get update
 8. Install Azure CLI (Maybe another way to pull images from ACR in Azure VM)
 ```shell
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
 9. Login to ACR
 ```shell
 # az login --tenant <TENANT-ID> --use-device-code

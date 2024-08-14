@@ -36,8 +36,7 @@ def insert_df_to_db(df):
     engine = create_engine(DATABASE_URL)
     SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     db = SessionLocal()
-
-    # delete_user(db, "rrajan")
+    
     try:
         max_id = db.query(sql_func.max(User.id)).scalar()
     except Exception as e:
