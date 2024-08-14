@@ -6,14 +6,45 @@
 
 
 ## Azure Services
+- **Azure Resource Group**: 
+
+        Azure Resource Group is a container that holds related Azure resources, such as virtual machines, storage accounts, and databases, for easier management and organization.
+- **Azure Blob Storage** 
+    
+        Azure Blob Storage is a service provided by Microsoft Azure that allows you to store and manage large amounts of unstructured data, such as text and binary data
+- **Azure Container Registry**: 
+
+        Azure Container Registry (ACR) is a managed Docker container registry service provided by Microsoft Azure.
+- **Azure Database for PostgreSQL**: 
+
+        Azure Database for PostgreSQL is a fully managed relational database service provided by Microsoft Azure that offers high availability, automated backups, scaling, and security features for PostgreSQL databases.
+- **Azure Function App**: 
+
+        Azure Functions is a serverless computing service provided by Microsoft Azure that allows developers to build and deploy event-driven applications without the need to manage infrastructure
+- **Azure Virtual Machine**: 
+
+        Azure Virtual Machines (VMs) is a scalable and flexible cloud computing service provided by Microsoft Azure that allows users to deploy and manage virtualized computing resources in the cloud.
+- **Azure Virtual Network**: 
+
+        Azure Virtual Network (VNet) is a logically isolated network in the Azure cloud that allows resources to securely communicate with each other and with on-premises networks
+- **Azure Security Group**: 
+
+        Azure Security Group is a set of firewall rules that controls inbound and outbound traffic to resources in a Azure Virtual Network.
+- **Azure Network Interface**:
+
+        Network Interface settings configure the network interface of a virtual machine, including IP addresses, network security groups, and connection properties.
+- **Azure Public IP**:
+
+        Azure Public IP address is an IP address that is accessible from the internet and is used to expose resources, such as virtual machines, to external networks
 
 ![AzureServices](./Images/azure-services.png)
 
-## **[Azure Blob Storage Documentation](demoStorage/README.md)**
-## **[Azure Container Registrty Documentation](demoContainerRegistry/README.md)**
-## **[Azure PostgreSQL Database Documentation](demoPostgres/README.md)**
-## **[Azure VM Documentation](demoApp/README.md)**
-## **[Azure Function Documentation](demoAzureFunction/README.md)**
+## Services Documentation
+  -   ### **[Azure Blob Storage Documentation](demoStorage/README.md)**
+  -   ### **[Azure Container Registrty Documentation](demoContainerRegistry/README.md)**
+  -   ### **[Azure PostgreSQL Database Documentation](demoPostgres/README.md)**
+  -   ### **[Azure VM Documentation](demoApp/README.md)**
+  -   ### **[Azure Function Documentation](demoAzureFunction/README.md)**
 
 
 ## Running the Application
