@@ -1,0 +1,83 @@
+RG:     ai_applied_science
+Tag:    ApplicationName : reading-group-tag
+##########################################
+docker ps -a --filter "name=umar_*"
+
+PORT FORWARDING
+sudo iptables -t nat -A PREROUTING -p tcp --dport 15080 -j REDIRECT --to-port 15085
+ssh -L 15085:localhost:15080 umar-admin@20.174.10.146
+
+umar-admin@20.174.10.146
+Umar1@password
+
+docker compose -f docker/docker-compose-azure.yaml up -d
+
+Azure VM
+##########################################
+docker ps -a --filter "name=umar_*"
+
+PORT FORWARDING
+sudo iptables -t nat -A PREROUTING -p tcp --dport 15080 -j REDIRECT --to-port 15085
+ssh -L 15085:localhost:15080 umar-admin@20.174.10.146
+
+umar-admin@20.174.10.146
+Umar1@password
+
+docker compose -f docker/docker-compose-azure.yaml up -d
+
+.env
+----
+POSTGRES_CONNECTION_STRING=postgresql://umar:umar_password@db:5432/demo_postgres_db
+BLOB_STORAGE_CONTAINER_NAME=team-data
+BLOB_STORAGE_ACCOUNT_NAME=readinggroupstorage
+BLOB_STORAGE_ACCOUNT_KEY=
+
+.env_azure
+----
+POSTGRES_CONNECTION_STRING=postgresql://umar:Password_123@reading-group-postgres.postgres.database.azure.com/demo_postgres_db
+BLOB_STORAGE_CONTAINER_NAME=team-data
+BLOB_STORAGE_ACCOUNT_NAME=readinggroupstorage
+BLOB_STORAGE_ACCOUNT_KEY=
+
+Azure Container Registry
+##########################################
+
+Login Server:   aiappliedsciences.azurecr.io
+Username:       AIAppliedSciences
+Password:       
+
+docker images --filter "reference=umar/*"
+docker images --filter "reference=aiappliedsciences.azurecr.io/*"
+
+Azure Postgres
+##########################################
+
+umar-admin@20.174.10.146
+Umar1@password
+
+
+# docker run -it --name umar_test_db aiappliedsciences.azurecr.io/postgres:latest bash
+# docker exec -it umar_team_db /bin/bash
+
+# psql -h reading-group-postgres.postgres.database.azure.com -p 5432 -U umar postgres
+# psql -h reading-group-postgres.postgres.database.azure.com -p 5432 -U umar demo_postgres_db
+# psql "--host=reading-group-postgres.postgres.database.azure.com" "--port=5432" "--dbname=demo_postgres_db" "--username=umar" "--set=sslmode=require"
+# Password_123
+
+SELECT * FROM public.users;
+TRUNCATE TABLE public.users;
+
+# \c demo_postgres_db    CHOOSE DATABASE
+# \dt+ public.*  TABLES IN SCHEMA
+# \d public.users.*   COLUMNS IN TABLE
+
+############ Local DB on System
+docker ps -a --filter "name=umar_*"
+docker exec -it umar_team_db bash
+
+AZURE STORAGE
+##########################################
+Blob SAS URL
+https://readinggroupstorage.blob.core.windows.net/sample-container?sp=rw&st=2024-08-12T17:20:19Z&se=2024-08-31T01:20:19Z&sv=2022-11-02&sr=c&sig=Hak6U7cPBDlqvYM1jYh%2Fvpz5gNtpIUYVtGE6yTpBj58%3D
+
+./azcopy copy "/nfs/users/ext_tr_muhammad_salman/Azure_AI/azure-demo-project/demoStorage/Data/*" "https://readinggroupstorage.blob.core.windows.net/sample-container?sp=rw&st=2024-08-12T17:20:19Z&se=2024-08-31T01:20:19Z&sv=2022-11-02&sr=c&sig=Hak6U7cPBDlqvYM1jYh%2Fvpz5gNtpIUYVtGE6yTpBj58%3D" --recursive=true
