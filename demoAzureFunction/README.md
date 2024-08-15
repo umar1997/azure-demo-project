@@ -27,7 +27,8 @@
 ### Set Up
 1. Create an Azure function in Azure cloud
 <br>
-[https://portal.azure.com/#create/Microsoft.FunctionApp](https://portal.azure.com/#create/Microsoft.FunctionApp)
+https://portal.azure.com/#create/Microsoft.FunctionApp
+
 ![searchapp.png](./../Images/demoAzureFunction/searchapp.png)
 
 2. View the Hosting options and plans
@@ -59,3 +60,5 @@
 8. Open the Azure function and run it.
 ![run_function](./../Images/demoAzureFunction/run_function.png)
 ![test_function](./../Images/demoAzureFunction/test_function.png)
+
+9. Tutorial Link: https://mohan-balaji.medium.com/getting-started-with-azure-functions-a-step-by-step-guide-e18f16764017

@@ -13,7 +13,7 @@
 ### Set Up
 1. Create a Azure Blob Storage on Azure Portal
 <br>
-[https://portal.azure.com/#create/Microsoft.VirtualMachine-ARM](https://portal.azure.com/#create/Microsoft.VirtualMachine-ARM)
+https://portal.azure.com/#create/Microsoft.VirtualMachine-ARM
 
 2. Select different configurations
     - Image for the VM generation

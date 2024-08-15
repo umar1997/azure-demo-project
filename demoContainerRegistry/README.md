@@ -32,7 +32,7 @@ az acr repository show-tags --name myacrregistry --repository my-app --output ta
 
 3. Create a Azure Container Registry on Azure Portal (Recommended)
 <br>
-[https://portal.azure.com/#create/Microsoft.ContainerRegistry](https://portal.azure.com/#create/Microsoft.ContainerRegistry)
+https://portal.azure.com/#create/Microsoft.ContainerRegistry
 
 4. Create the docker image
 ```shell

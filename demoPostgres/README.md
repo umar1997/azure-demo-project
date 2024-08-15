@@ -13,7 +13,7 @@
 ### Set Up
 1. Create a Azure Database for PostgreSQL on Azure Portal
 <br>
-[https://portal.azure.com/#create/Microsoft.PostgreSQLFlexibleServer](https://portal.azure.com/#create/Microsoft.PostgreSQLFlexibleServer)
+https://portal.azure.com/#create/Microsoft.PostgreSQLFlexibleServer
 
 2. Enter your Username and Password to access the DB
 ![authentication](./../Images/demoPostgres/authentication.png)

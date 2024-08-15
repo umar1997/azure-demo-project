@@ -8,7 +8,7 @@
 ### Set Up
 1. Create a Azure Blob Storage on Azure Portal
 <br>
-[https://portal.azure.com/#create/Microsoft.StorageAccount-ARM](https://portal.azure.com/#create/Microsoft.StorageAccount-ARM)
+https://portal.azure.com/#create/Microsoft.StorageAccount-ARM
 
 2. Set up the Blob Storage
 ![CreateStorage](./../Images/demoStorage/create-storage.png)
