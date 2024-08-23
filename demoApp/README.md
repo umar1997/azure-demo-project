@@ -69,6 +69,8 @@ echo \
 
 
 sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 >> Note: You will have to use sudo docker to run commands or add User to the docker group
 
