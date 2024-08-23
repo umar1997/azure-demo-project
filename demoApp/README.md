@@ -11,7 +11,7 @@
 - They offer high availability, robust security features, and seamless integration with other Azure services, providing a cost-effective and efficient solution for dynamic workloads and infrastructure management.
 
 ### Set Up
-1. Create a Azure Blob Storage on Azure Portal
+1. Create a Azure Virtual Machine on Azure Portal
 <br>
 https://portal.azure.com/#create/Microsoft.VirtualMachine-ARM
 
