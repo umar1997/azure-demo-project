@@ -55,6 +55,8 @@ umar-admin@20.174.10.146's password:
 7. Set up Docker on your VM 
 ([YouTube Tutorial Link](https://www.youtube.com/watch?v=UM0f76-0FLI))
 ```shell
+# Link: https://docs.docker.com/engine/install/ubuntu/
+
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
